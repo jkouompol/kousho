@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Generate SSH key
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+# Generate SSH key (press Enter when prompted to accept defaults)
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com" -f ~/.ssh/id_rsa -N ""
 
-# Start the SSH agent and evaluate it in the current shell
+# Start the SSH agent in the current shell session
 eval "$(ssh-agent -s)"
 
 # Add the SSH key to the agent
